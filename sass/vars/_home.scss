@@ -1,0 +1,35 @@
+
+// Stylesheet for the Home Page
+
+body {
+    background: color(bg);
+}
+
+p, a {
+    color: color(home-link);
+    font-size: 18px;
+    padding: 10px;
+    display: block;
+
+    @include respond-to (md){
+      font-size: 15px;
+      padding: 7px;
+    }
+    @include respond-to (lg){
+      font-size: 16px;
+      padding: 8px;
+    }
+}
+
+
+p {
+  font-family: 'Lexend Zetta', Helvetica, Arial;
+  margin-left: -1px;
+}
+
+a {
+  font-family: 'Lexend Deca', Helvetica, Arial;
+  &:hover {
+    color: color(home-hover);
+  }
+}

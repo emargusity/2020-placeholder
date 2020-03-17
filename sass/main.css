@@ -443,8 +443,58 @@ body, html {
 
 /* TEMPORARY STYLES */
 /* VARIABLES */
-/* PARTIALS */
 body {
   background: #000; }
+
+p, a {
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+  display: block; }
+  @media (min-width: 767px) {
+    p, a {
+      font-size: 15px;
+      padding: 7px; } }
+  @media (min-width: 1024px) {
+    p, a {
+      font-size: 16px;
+      padding: 8px; } }
+
+p {
+  font-family: 'Lexend Zetta', Helvetica, Arial;
+  margin-left: -1px; }
+
+a {
+  font-family: 'Lexend Deca', Helvetica, Arial; }
+  a:hover {
+    color: #ff0000; }
+
+/* PARTIALS */
+ul, li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.primary-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column; }
+  @media (min-width: 767px) {
+    .primary-container {
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; } }
+  .primary-container .project-column {
+    width: 260px;
+    margin: 15px calc(30px + 8vw); }
+    @media (min-width: 767px) {
+      .primary-container .project-column {
+        width: auto;
+        margin: 0 5px;
+        height: 270px; } }
+    @media (min-width: 1024px) {
+      .primary-container .project-column {
+        margin: 0 30px; } }
 
 /*# sourceMappingURL=main.css.map */

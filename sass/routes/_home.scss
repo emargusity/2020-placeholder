@@ -1,6 +1,39 @@
 
-// Stylesheet for the Home Page
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
-body {
-    background: color(bg);
+.primary-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+
+    @include respond-to(md) {
+      flex-direction: row;
+      // justify centers horizontally
+      justify-content: center;
+      // align centers vertically... but only to the height of the divs
+      // requires project-column divs to all be same height
+      align-items: center;
+    }
+
+    .project-column {
+      width: 260px;
+      margin: 15px calc(30px + 8vw);
+      // border: 3px solid red;
+
+      @include respond-to(md) {
+        width: auto;
+        margin: 0 5px;
+        height: 270px;
+      }
+
+      @include respond-to(lg) {
+        margin: 0 30px;
+      }
+    }
+
 }
