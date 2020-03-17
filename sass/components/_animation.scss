@@ -1,0 +1,228 @@
+/* ----- KEYFRAMES ----- */
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		transform: translate3d(0, 15vh, 0);
+		opacity: 0.0;
+	}
+
+	5% {
+		transform: translate3d(0, 15vh, 0);
+		opacity: 0.0;
+	}
+
+	// 50% {
+	//
+	// 	// -webkit-filter: grayscale(100%);
+  //   // 	filter: grayscale(100%);
+	//
+	// }
+
+	100% {
+		transform: translate3d(0,0,0);
+		// -webkit-filter: grayscale(0%);
+    // 	filter: grayscale(0%);
+		opacity: 1.0;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1.0;
+	}
+
+	100% {
+		opacity: 0.0;
+	}
+}
+
+
+@keyframes projectHoverA {
+	0% {
+		transform: rotateZ(0deg) rotateY(0deg) scale(1.0);
+		box-shadow: 0 0 0 red;
+	}
+	33% {
+		transform: rotateZ(360deg) rotateY(0deg) scale(1.0);
+	}
+
+	66% {
+		transform: rotateZ(720deg) rotateY(0.2deg) scale(2.0);
+	}
+
+	100% {
+		transform: rotateZ(1080deg) rotateY(0.0deg) scale(1.0);
+		box-shadow: 0px	0px 300px red;
+	}
+}
+
+
+/* ----- ANIMATION-MIXINS ----- */
+
+.setZero {
+	opacity: 0;
+}
+
+@mixin globalFadeIn($fadeTiming: 300ms, $fadeInDelay: 0ms) {
+	  -webkit-animation: fadeIn $fadeTiming ease-in-out;
+	  -moz-animation: fadeIn $fadeTiming ease-in-out;
+	  -o-animation: fadeIn $fadeTiming ease-in-out;
+	  animation: fadeIn $fadeTiming ease-in-out;
+		animation-fill-mode: forwards;
+		animation-delay: $fadeInDelay;
+}
+
+@mixin menuFade($menuTiming: 100ms, $menuDelay: 0ms) {
+	  opacity: 0.0;
+	  -webkit-animation: fadeIn $menuTiming cubic-bezier(0.000, 1.650, 1.000, -0.600);
+	  -moz-animation: fadeIn $menuTiming cubic-bezier(0.000, 1.650, 1.000, -0.600);
+	  -o-animation: fadeIn $menuTiming cubic-bezier(0.000, 1.650, 1.000, -0.600);
+	  animation: fadeIn $menuTiming cubic-bezier(0.000, 1.650, 1.000, -0.600);
+	  animation-delay: $menuDelay;
+	  animation-fill-mode: forwards;
+}
+
+@mixin globalFadeUp($fadeUpTiming: 1200ms, $fadeUpDelay: 0ms) {
+	  -webkit-animation: fadeInUp $fadeUpTiming cubic-bezier(.17,.47,.24,.99);
+	  -moz-animation: fadeInUp $fadeUpTiming cubic-bezier(.17,.47,.24,.99);
+	  -o-animation: fadeInUp $fadeUpTiming cubic-bezier(.17,.47,.24,.99);
+	  animation: fadeInUp $fadeUpTiming cubic-bezier(.17,.47,.24,.99);
+	animation-delay: $fadeUpDelay;
+	animation-fill-mode: forwards;
+}
+
+@mixin offSet($offSetDelay: 150ms) {
+	animation-delay: $offSetDelay;
+}
+
+@mixin globalFadeOut($fadeOutTiming: 400ms) {
+	  -webkit-animation: fadeOut $fadeOutTiming ease-out;
+	  -moz-animation: fadeOut $fadeOutTiming ease-out;
+	  -o-animation: fadeOut $fadeOutTiming ease-out;
+	  animation: fadeOut $fadeOutTiming ease-out;
+}
+
+@mixin projectAnimationHoverA($timing: 10000ms) {
+		animation: projectHoverA $timing linear;
+		animation-fill-mode: forwards;
+}
+
+
+@mixin easeIn($easeTiming: 150ms) {
+	-webkit-transition: color $easeTiming ease-in-out;
+    -moz-transition: color $easeTiming ease-in-out;
+    -o-transition: color $easeTiming ease-in-out;
+    transition: color $easeTiming ease-in-out;
+}
+
+@mixin imageEaseIn($easeTiming: 300ms) {
+	-webkit-transition: opacity $easeTiming ease-in-out;
+    -moz-transition: opacity $easeTiming ease-in-out;
+    -o-transition: opacity $easeTiming ease-in-out;
+    transition: opacity $easeTiming ease-in-out;
+}
+
+@mixin bgEaseIn($easeTiming: 300ms) {
+	-webkit-transition: background $easeTiming ease-in-out;
+    -moz-transition: background $easeTiming ease-in-out;
+    -o-transition: background $easeTiming ease-in-out;
+    transition: background $easeTiming ease-in-out;
+}
+
+@mixin fillEaseIn($easeTiming: 300ms) {
+	-webkit-transition: fill $easeTiming ease-in-out;
+    -moz-transition: fill $easeTiming ease-in-out;
+    -o-transition: fill $easeTiming ease-in-out;
+    transition: fill $easeTiming ease-in-out;
+}
+
+@mixin transformEaseIn($easeTiming: 300ms) {
+	-webkit-transition: transform $easeTiming ease-in-out;
+    -moz-transition: transform $easeTiming ease-in-out;
+    -o-transition: transform $easeTiming ease-in-out;
+    transition: transform $easeTiming ease-in-out;
+}
+
+@mixin anyEaseIn($easeTiming: 300ms) {
+	-webkit-transition: all $easeTiming ease-in-out;
+    -moz-transition: all $easeTiming ease-in-out;
+    -o-transition: all $easeTiming ease-in-out;
+    transition: all $easeTiming ease-in-out;
+}
+
+/* ----- HELPERS ----- */
+
+.globalfadeIn {
+	@include globalFadeIn();
+}
+
+.globalfadeOut {
+	@include globalFadeOut();
+}
+
+.globalfadeUp {
+	@include globalFadeUp();
+}
+
+.offset {
+	@include offSet();
+}
+
+.animate {
+	opacity: 0.0;
+}
+
+.a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8, .a9, .a10, .a11, .a12 {
+	opacity: 0.0;
+}
+
+.a-one {
+		@include globalFadeUp($fadeUpDelay: 0ms );
+}
+
+.a-two {
+    @include globalFadeUp($fadeUpDelay: 25ms );
+	}
+
+.a-three {
+    @include globalFadeUp($fadeUpDelay: 50ms );
+	}
+
+.a-four {
+    @include globalFadeUp($fadeUpDelay: 75ms );
+	}
+.a-five {
+    @include globalFadeUp($fadeUpDelay: 100ms );
+	}
+.a-six {
+    @include globalFadeUp($fadeUpDelay: 125ms );
+	}
+
+.a-seven {
+    @include globalFadeUp($fadeUpDelay: 150ms );
+	}
+.a-eight {
+    @include globalFadeUp($fadeUpDelay: 175ms );
+	}
+.a-nine {
+    @include globalFadeUp($fadeUpDelay: 200ms );
+	}
+.a-ten {
+    @include globalFadeUp($fadeUpDelay: 225ms );
+	}
+.a-eleven {
+    @include globalFadeUp($fadeUpDelay: 250ms );
+	}
+.a-twelve {
+    @include globalFadeUp($fadeUpDelay: 275ms );
+	}

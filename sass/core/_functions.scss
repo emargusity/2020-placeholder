@@ -1,0 +1,46 @@
+
+// COLOR MAP FUNCTION
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+
+// BREAKPOINTS FUNCTION
+@mixin respond-to($name) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $name) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+// BASIC MEDIA QUERIES FOR COPY PASTE
+
+// @include respond-to(sm){
+//
+// }
+// @include respond-to(md){
+//
+// }
+// @include respond-to(lg){
+//
+// }
+// @include respond-to(xl){
+//
+// }
+// @include respond-to(xxl){
+//
+// }

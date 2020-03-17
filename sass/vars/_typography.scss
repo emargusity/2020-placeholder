@@ -1,0 +1,31 @@
+@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,900';
+@import 'https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap';
+
+$all-fonts: "Lexend Deca", sans-serif;
+$accent-font: "YoungSerif", "Lato", sans-serif;
+
+$hero-font-size: 192px;
+$hero-font-weight: bold;
+$hero-font: "Helvetica Neue", "Arial", sans-serif;
+$hero-line-height: 100px;
+
+$alpha-font-size: 73px;
+$alpha-font-line-height: 60px;
+$alpha-font-weight: 900;
+
+
+$beta-font-size: 20px;
+$beta-font-line-height: 50px;
+$beta-font-weight: 100;
+
+
+$gamma-font-size: 16px;
+$gamma-font-line-height: 30px;
+$gamma-font-weight: 400;
+$gamma-letter-spacing: 15px;
+
+@font-face {
+	font-family: "YoungSerif";
+	src: url(../../fonts/YoungSerif-Regular.otf);
+}

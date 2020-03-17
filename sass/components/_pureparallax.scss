@@ -1,0 +1,72 @@
+$parallax-scale-2: 1;
+$parallax-scale-3: 5;
+
+body, html {
+  overflow-x: hidden;
+}
+
+// body {
+//     transform: translateZ(0);
+// }
+
+.parallax {
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    @include respond-to(md) {
+        perspective: 1px;
+        height: 100vh;
+        // perspective-origin-x: 100%;
+    }
+    .footer {
+        overflow-x: visible;
+    }
+  }
+
+.parallax__group {
+
+    @include respond-to(md) {
+        position: relative;
+        transform-style: preserve-3d;
+        margin-bottom: 10px;
+        display: block;
+    }
+  }
+
+.parallax__layer {
+
+    position: absolute;
+  /* SEE MY GROUP
+    border: 3px solid red;*/
+
+    @include respond-to(md) {
+        // transform-origin-x: 100%;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.parallax__layer--1 {
+    @include respond-to(md) {
+        transform: translateZ(0);
+    }
+}
+
+.parallax__layer--2 {
+    @include respond-to(md) {
+        transform: translateZ(-1px) scale(2);
+        padding: 0px;
+        margin: 0px;
+    }
+}
+
+.parallax__layer--3 {
+    @include respond-to(md) {
+        transform: translateZ($parallax-scale-3*-1px) scale($parallax-scale-3+1);
+    }
+}
+
+/* TEMPORARY STYLES */
