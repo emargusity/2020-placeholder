@@ -1,9 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900';
-@import 'https://fonts.googleapis.com/css?family=Roboto:400,900';
-@import 'https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap';
+@import url('https://fonts.googleapis.com/css?family=Lexend+Deca|Lexend+Zetta&display=swap');
 
 $all-fonts: "Lexend Deca", sans-serif;
-$accent-font: "YoungSerif", "Lato", sans-serif;
 
 $hero-font-size: 192px;
 $hero-font-weight: bold;
@@ -24,8 +21,3 @@ $gamma-font-size: 16px;
 $gamma-font-line-height: 30px;
 $gamma-font-weight: 400;
 $gamma-letter-spacing: 15px;
-
-@font-face {
-	font-family: "YoungSerif";
-	src: url(../../fonts/YoungSerif-Regular.otf);
-}
