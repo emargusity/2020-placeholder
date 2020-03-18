@@ -11,6 +11,11 @@ p, a {
     padding: 10px;
     display: block;
 
+    &::selection {
+      color: black;
+      background: red;
+    }
+
     @include respond-to (md){
       font-size: 15px;
       padding: 7px;

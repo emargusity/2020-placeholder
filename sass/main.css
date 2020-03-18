@@ -451,6 +451,9 @@ p, a {
   font-size: 18px;
   padding: 10px;
   display: block; }
+  p::selection, a::selection {
+    color: black;
+    background: red; }
   @media (min-width: 767px) {
     p, a {
       font-size: 15px;
