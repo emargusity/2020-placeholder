@@ -467,7 +467,26 @@ p {
 a {
   font-family: 'Lexend Deca', Helvetica, Arial; }
   a:hover {
-    color: #ff0000; }
+    -webkit-transition: all 100ms ease-in-out;
+    -moz-transition: all 100ms ease-in-out;
+    -o-transition: all 100ms ease-in-out;
+    transition: all 100ms ease-in-out;
+    color: #4472E7; }
+
+#personal-data > p {
+  font-family: 'Lexend Deca', Helvetica, Arial;
+  font-size: 14px;
+  line-height: 26px;
+  padding: 0px;
+  display: block; }
+  @media (min-width: 767px) {
+    #personal-data > p {
+      font-size: 15px;
+      line-height: 26px; } }
+  @media (min-width: 1024px) {
+    #personal-data > p {
+      font-size: 16px;
+      line-height: 28px; } }
 
 /* PARTIALS */
 ul, li {
@@ -475,26 +494,39 @@ ul, li {
   margin: 0;
   padding: 0; }
 
-.primary-container {
+.project-container {
   display: flex;
   width: 100vw;
   height: 100vh;
   flex-direction: column; }
   @media (min-width: 767px) {
-    .primary-container {
+    .project-container {
       flex-direction: row;
       justify-content: center;
       align-items: center; } }
-  .primary-container .project-column {
+  .project-container .project-column {
     width: 260px;
     margin: 15px calc(30px + 8vw); }
     @media (min-width: 767px) {
-      .primary-container .project-column {
+      .project-container .project-column {
         width: auto;
         margin: 0 5px;
         height: 270px; } }
     @media (min-width: 1024px) {
-      .primary-container .project-column {
+      .project-container .project-column {
         margin: 0 30px; } }
+
+#personal-data {
+  position: relative;
+  display: block;
+  margin: 45px calc(40px + 8vw); }
+  @media (min-width: 767px) {
+    #personal-data {
+      margin: 0;
+      position: fixed;
+      bottom: 30px;
+      left: 50px; } }
+  #personal-data img {
+    width: 214px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -5,7 +5,8 @@ ul, li {
     padding: 0;
 }
 
-.primary-container {
+
+.project-container {
     display: flex;
     width: 100vw;
     height: 100vh;
@@ -36,4 +37,23 @@ ul, li {
       }
     }
 
+}
+
+
+
+#personal-data {
+    position: relative;
+    display: block;
+    margin: 45px calc(40px + 8vw);
+
+    @include respond-to(md) {
+      margin: 0;
+      position: fixed;
+      bottom: 30px;
+      left: 50px;
+    }
+
+    img {
+      width: 214px;
+    }
 }
