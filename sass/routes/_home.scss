@@ -27,7 +27,7 @@ ul, li {
 
     .project-column {
       width: 260px;
-      margin: 15px calc(30px + 8vw);
+      margin: 15px calc(30px + 6vw);
       // border: 3px solid red;
 
       @include respond-to(md) {
@@ -48,7 +48,7 @@ ul, li {
 #personal-data {
     position: relative;
     display: block;
-    margin: 45px calc(40px + 8vw);
+    margin: 45px 0 45px calc(40px + 6vw);
 
     @include respond-to(md) {
       margin: 0;

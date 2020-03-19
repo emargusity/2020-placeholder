@@ -37,6 +37,10 @@ p, a {
 p {
   font-family: 'Lexend Zetta', Helvetica, Arial;
   margin-left: -1px;
+  margin-bottom: 0;
+  @include respond-to (md){
+    margin-bottom: 16px;
+  }
 }
 
 a {
@@ -51,8 +55,8 @@ a {
 
 #personal-data>p {
   font-family: 'Lexend Deca', Helvetica, Arial;
-  font-size: 14px;
-  line-height: 26px;
+  font-size: 13px;
+  line-height: 24px;
   padding: 0px;
   display: block;
   @include respond-to(md) {
