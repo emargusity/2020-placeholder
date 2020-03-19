@@ -13,6 +13,10 @@ ul, li {
     flex-direction: column;
 
     @include respond-to(md) {
+
+      //Scroll images over top work?
+      position: fixed;
+
       flex-direction: row;
       // justify centers horizontally
       justify-content: center;

@@ -1,0 +1,53 @@
+
+#stream {
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+   margin-top: 200px;
+   margin-bottom: 200px;
+   height: auto;
+   // align-content: center;
+   justify-content: center;
+
+   @include respond-to(md) {
+        margin-top: 100vh;
+        margin-bottom: 100vh;
+   }
+}
+
+
+#stream img {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.stream-left {
+    width: 50vw;
+    margin-left: 2vw;
+}
+
+.stream-right {
+    width: 70vw;
+    margin-right: 2vw;
+    align-self: flex-end;
+}
+
+.stream-center {
+    align-self: center;
+    width: 90vw;
+}
+
+.small {
+    width: 40vw;
+}
+
+.messaging {
+    font-size: calc(14px + 8vw);
+    text-align: center;
+    // color: #222;
+    line-height: calc((14px + 8vw) * 1.5);
+    z-index: 9999;
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 20.83%, rgba(0, 0, 0, 0.9) 79.69%, rgba(0, 0, 0, 0) 100%);
+}
