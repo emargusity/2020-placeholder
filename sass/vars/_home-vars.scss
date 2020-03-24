@@ -1,0 +1,79 @@
+
+// Stylesheet for the Home Page
+
+* {
+  &::selection {
+    color: black;
+    background: red;
+  }
+}
+
+body {
+    background: color(bg);
+}
+
+p, a {
+      color: color(home-link);
+      margin: 0;
+      padding: 0;
+      display: block;
+}
+
+.project-column-title, .name, .messaging  {
+  font-family: 'Lexend Zetta', Helvetica, Arial;
+}
+
+.project-column-projects, #personal-data, .intro-copy, #links {
+  font-family: 'Lexend Deca', Helvetica, Arial;
+}
+
+
+// BODY COPY FONT SCALING
+.project-column-title p, .project-column-projects a, .name {
+    font-size: 18px;
+    padding: 10px;
+
+    @include respond-to (md){
+      font-size: 15px;
+      padding: 7px;
+    }
+    @include respond-to (lg){
+      font-size: 16px;
+      padding: 8px;
+    }
+}
+
+// RESET FOR NON PADDING
+.name {
+    padding: 0px;
+}
+
+// SMALL FONT SCALING\
+#personal-data p, #links>a {
+  font-size: 13px;
+  line-height: 24px;
+  @include respond-to(md) {
+      font-size: 15px;
+      line-height: 26px;
+  }
+  @include respond-to(lg) {
+      font-size: 16px;
+      line-height: 28px;
+  }
+}
+
+
+.project-column-title p {
+  margin-left: -1px;
+  @include respond-to (md){
+    margin-bottom: 16px;
+  }
+}
+
+.project-column-projects a {
+  &:hover {
+    @include anyEaseIn($easeTiming: 100ms);
+    color: color(home-hover);
+    // background: #1B1C1F;
+  }
+}
