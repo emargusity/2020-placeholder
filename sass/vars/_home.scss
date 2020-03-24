@@ -1,20 +1,37 @@
 
 // Stylesheet for the Home Page
 
+* {
+  &::selection {
+    color: black;
+    background: red;
+  }
+}
+
 body {
     background: color(bg);
 }
 
 p, a {
-    color: color(home-link);
+      color: color(home-link);
+      margin: 0;
+      padding: 0;
+      display: block;
+}
+
+.project-column-title, .name, .messaging  {
+  font-family: 'Lexend Zetta', Helvetica, Arial;
+}
+
+.project-column-projects, #personal-data, .intro-copy {
+  font-family: 'Lexend Deca', Helvetica, Arial;
+}
+
+
+// BODY COPY FONT SCALING
+.project-column-title p, .project-column-projects a, .name {
     font-size: 18px;
     padding: 10px;
-    display: block;
-
-    &::selection {
-      color: black;
-      background: red;
-    }
 
     @include respond-to (md){
       font-size: 15px;
@@ -26,39 +43,15 @@ p, a {
     }
 }
 
-.additional-links {
+// RESET FOR NON PADDING
+.name {
     padding: 0px;
-    display: inline;
-    font-size: inherit;
-    text-decoration: underline;
 }
 
-
-p {
-  font-family: 'Lexend Zetta', Helvetica, Arial;
-  margin-left: -1px;
-  margin-bottom: 0;
-  @include respond-to (md){
-    margin-bottom: 16px;
-  }
-}
-
-a {
-  font-family: 'Lexend Deca', Helvetica, Arial;
-  &:hover {
-    @include anyEaseIn($easeTiming: 100ms);
-    color: color(home-hover);
-    // background: #1B1C1F;
-  }
-}
-
-
-#personal-data>p {
-  font-family: 'Lexend Deca', Helvetica, Arial;
+// SMALL FONT SCALING\
+#personal-data p {
   font-size: 13px;
   line-height: 24px;
-  padding: 0px;
-  display: block;
   @include respond-to(md) {
       font-size: 15px;
       line-height: 26px;
@@ -66,5 +59,21 @@ a {
   @include respond-to(lg) {
       font-size: 16px;
       line-height: 28px;
+  }
+}
+
+
+.project-column-title p {
+  margin-left: -1px;
+  @include respond-to (md){
+    margin-bottom: 16px;
+  }
+}
+
+.project-column-projects a {
+  &:hover {
+    @include anyEaseIn($easeTiming: 100ms);
+    color: color(home-hover);
+    // background: #1B1C1F;
   }
 }

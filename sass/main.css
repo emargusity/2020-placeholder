@@ -294,13 +294,13 @@ li {
 .offset {
   animation-delay: 150ms; }
 
-.animate {
+.animate, .project-container {
   opacity: 0.0; }
 
-.a1, .a2, .a3, .a4, .a5, .a6, .a7, .a8, .a9, .a10, .a11, .a12 {
+.a1, .name, .a2, .a3, .line-1, .a4, .line-2, .a5, .line-3, .a6, .a7, .a8, .arrow, .a9, .a10, .a11, .a12 {
   opacity: 0.0; }
 
-.a-one {
+.a-one, .name {
   -webkit-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -moz-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -o-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
@@ -316,7 +316,7 @@ li {
   animation-delay: 25ms;
   animation-fill-mode: forwards; }
 
-.a-three {
+.a-three, .line-1 {
   -webkit-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -moz-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -o-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
@@ -324,7 +324,7 @@ li {
   animation-delay: 50ms;
   animation-fill-mode: forwards; }
 
-.a-four {
+.a-four, .line-2 {
   -webkit-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -moz-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -o-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
@@ -332,7 +332,7 @@ li {
   animation-delay: 75ms;
   animation-fill-mode: forwards; }
 
-.a-five {
+.a-five, .line-3 {
   -webkit-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -moz-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -o-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
@@ -356,7 +356,7 @@ li {
   animation-delay: 150ms;
   animation-fill-mode: forwards; }
 
-.a-eight {
+.a-eight, .arrow {
   -webkit-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -moz-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
   -o-animation: fadeInUp 1200ms cubic-bezier(0.17, 0.47, 0.24, 0.99);
@@ -443,65 +443,127 @@ body, html {
 
 /* TEMPORARY STYLES */
 /* VARIABLES */
+*::selection {
+  color: black;
+  background: red; }
+
 body {
   background: #000; }
 
 p, a {
   color: #fff;
-  font-size: 18px;
-  padding: 10px;
+  margin: 0;
+  padding: 0;
   display: block; }
-  p::selection, a::selection {
-    color: black;
-    background: red; }
+
+.project-column-title, .name, .messaging {
+  font-family: 'Lexend Zetta', Helvetica, Arial; }
+
+.project-column-projects, #personal-data, .intro-copy {
+  font-family: 'Lexend Deca', Helvetica, Arial; }
+
+.project-column-title p, .project-column-projects a, .name {
+  font-size: 18px;
+  padding: 10px; }
   @media (min-width: 767px) {
-    p, a {
+    .project-column-title p, .project-column-projects a, .name {
       font-size: 15px;
       padding: 7px; } }
   @media (min-width: 1024px) {
-    p, a {
+    .project-column-title p, .project-column-projects a, .name {
       font-size: 16px;
       padding: 8px; } }
 
-.additional-links {
-  padding: 0px;
-  display: inline;
-  font-size: inherit;
-  text-decoration: underline; }
+.name {
+  padding: 0px; }
 
-p {
-  font-family: 'Lexend Zetta', Helvetica, Arial;
-  margin-left: -1px;
-  margin-bottom: 0; }
-  @media (min-width: 767px) {
-    p {
-      margin-bottom: 16px; } }
-
-a {
-  font-family: 'Lexend Deca', Helvetica, Arial; }
-  a:hover {
-    -webkit-transition: all 100ms ease-in-out;
-    -moz-transition: all 100ms ease-in-out;
-    -o-transition: all 100ms ease-in-out;
-    transition: all 100ms ease-in-out;
-    color: #4472E7; }
-
-#personal-data > p {
-  font-family: 'Lexend Deca', Helvetica, Arial;
+#personal-data p {
   font-size: 13px;
-  line-height: 24px;
-  padding: 0px;
-  display: block; }
+  line-height: 24px; }
   @media (min-width: 767px) {
-    #personal-data > p {
+    #personal-data p {
       font-size: 15px;
       line-height: 26px; } }
   @media (min-width: 1024px) {
-    #personal-data > p {
+    #personal-data p {
       font-size: 16px;
       line-height: 28px; } }
 
+.project-column-title p {
+  margin-left: -1px; }
+  @media (min-width: 767px) {
+    .project-column-title p {
+      margin-bottom: 16px; } }
+
+.project-column-projects a:hover {
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  color: #4472E7; }
+
 /* PARTIALS */
+#intro-slide {
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  position: absolute;
+  background: url("../img/hero-image.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-animation: fadeIn 1000ms ease-in-out;
+  -moz-animation: fadeIn 1000ms ease-in-out;
+  -o-animation: fadeIn 1000ms ease-in-out;
+  animation: fadeIn 1000ms ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #intro-slide:after {
+    content: "";
+    width: 100vw;
+    height: 30vh;
+    background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+    position: absolute;
+    top: 100vh;
+    left: 0; }
+
+#intro-flex {
+  margin-top: -10px; }
+  #intro-flex .intro-copy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; }
+    @media (min-width: 767px) {
+      #intro-flex .intro-copy {
+        display: block; } }
+
+.list {
+  float: left; }
+
+.name, .line-3 {
+  padding-bottom: 10px; }
+
+.intro-copy {
+  font-size: 20px;
+  line-height: 32px; }
+  @media (min-width: 767px) {
+    .intro-copy {
+      letter-spacing: 0.02em;
+      font-size: 32px;
+      line-height: 51px; } }
+
+@media (min-width: 767px) {
+  .arrow {
+    clear: both;
+    position: relative;
+    top: 16px; } }
+
 #stream {
   display: flex;
   flex-direction: column;
@@ -512,7 +574,7 @@ a {
   justify-content: center; }
   @media (min-width: 767px) {
     #stream {
-      margin-top: 100vh;
+      margin-top: 200vh;
       margin-bottom: 100vh; } }
 
 #stream img {
@@ -562,7 +624,13 @@ ul, li {
   display: flex;
   width: 100vw;
   height: 100vh;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-animation: fadeIn 300ms ease-in-out;
+  -moz-animation: fadeIn 300ms ease-in-out;
+  -o-animation: fadeIn 300ms ease-in-out;
+  animation: fadeIn 300ms ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1000ms; }
   @media (min-width: 767px) {
     .project-container {
       position: fixed;

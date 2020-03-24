@@ -11,6 +11,8 @@ ul, li {
     width: 100vw;
     height: 100vh;
     flex-direction: column;
+    @extend .animate;
+    @include globalFadeIn($fadeInDelay: 1000ms, $fadeTiming: 300ms);
 
     @include respond-to(md) {
 

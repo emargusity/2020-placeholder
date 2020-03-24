@@ -1,0 +1,96 @@
+
+#intro-slide {
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    position: absolute;
+    background: url("../img/hero-image.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    @include globalFadeIn($fadeTiming: 1000ms);
+
+    // CENTER FLEX CONTAINER
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &:after {
+        content: "";
+        width: 100vw;
+        height: 30vh;
+        background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+        position: absolute;
+        top: 100vh;
+        left: 0;
+    }
+}
+
+#intro-flex {
+    margin-top: -10px;
+
+    .intro-copy, {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        @include respond-to(md) {
+            display: block;
+        }
+    }
+
+}
+
+.list {
+    float: left;
+}
+
+.name, .line-3 {
+    padding-bottom: 10px;
+}
+
+
+// INTRO SLIDE COPY
+.intro-copy {
+  font-size: 20px;
+  line-height: 32px;
+
+  @include respond-to(md) {
+      letter-spacing: 0.02em;
+      font-size: 32px;
+      line-height: 51px;
+  }
+}
+
+//ARROW
+
+.arrow {
+  @include respond-to(md) {
+    clear: both;
+    position: relative;
+    top: 16px;
+  }
+}
+
+.name {
+  @extend .a1, .a-one;
+}
+
+.line-1 {
+  @extend .a3, .a-three;
+}
+
+.line-2 {
+  @extend .a4, .a-four;
+}
+
+.line-3 {
+  @extend .a5, .a-five;
+}
+
+.arrow {
+  @extend .a8, .a-eight
+}
