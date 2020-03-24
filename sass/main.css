@@ -666,7 +666,12 @@ ul, li {
       bottom: 30px;
       left: 50px; } }
   #personal-data img, #links img {
-    width: 214px; }
+    width: 214px;
+    margin-bottom: 10px;
+    margin-left: 1px; }
+    @media (min-width: 767px) {
+      #personal-data img, #links img {
+        margin-left: 2px; } }
 
 #links {
   margin: 15px 0 45px calc(30px + 6vw); }
