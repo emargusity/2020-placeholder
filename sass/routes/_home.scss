@@ -9,12 +9,18 @@ ul, li {
 .project-container {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     flex-direction: column;
+
+    margin-top: 120vh;
+
     @extend .animate;
     @include globalFadeIn($fadeInDelay: 1000ms, $fadeTiming: 300ms);
 
     @include respond-to(md) {
+
+      margin-top: 0;
+      height: 100vh;
 
       //Scroll images over top work?
       position: fixed;
@@ -47,10 +53,10 @@ ul, li {
 
 
 
-#personal-data {
+#personal-data, #links {
     position: relative;
     display: block;
-    margin: 45px 0 45px calc(40px + 6vw);
+    margin: 45px 0 0px calc(40px + 6vw);
 
     @include respond-to(md) {
       margin: 0;
@@ -62,4 +68,23 @@ ul, li {
     img {
       width: 214px;
     }
+}
+
+#links {
+
+  margin: 15px 0 45px calc(30px + 6vw);
+
+  @include respond-to(md) {
+    left: auto;
+    right: 50px;
+    margin-bottom: -10px;
+    margin-right: -10px;
+  }
+  a {
+    padding: 10px;
+    float: left;
+    @include respond-to(md) {
+      float: right;
+    }
+  }
 }

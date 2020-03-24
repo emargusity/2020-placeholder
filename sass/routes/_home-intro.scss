@@ -21,11 +21,15 @@
     &:after {
         content: "";
         width: 100vw;
-        height: 30vh;
+        height: 0vh;
         background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
         position: absolute;
         top: 100vh;
         left: 0;
+
+        @include respond-to(md){
+            height: 30vh;
+        }
     }
 }
 

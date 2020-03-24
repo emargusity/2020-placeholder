@@ -23,7 +23,7 @@ p, a {
   font-family: 'Lexend Zetta', Helvetica, Arial;
 }
 
-.project-column-projects, #personal-data, .intro-copy {
+.project-column-projects, #personal-data, .intro-copy, #links {
   font-family: 'Lexend Deca', Helvetica, Arial;
 }
 
@@ -49,7 +49,7 @@ p, a {
 }
 
 // SMALL FONT SCALING\
-#personal-data p {
+#personal-data p, #links>a {
   font-size: 13px;
   line-height: 24px;
   @include respond-to(md) {
