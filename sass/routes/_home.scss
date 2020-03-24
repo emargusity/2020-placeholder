@@ -19,11 +19,13 @@ ul, li {
 
     @include respond-to(md) {
 
-      margin-top: 0;
-      height: 100vh;
-
       //Scroll images over top work?
       position: fixed;
+      top: 0;
+      left: 0;
+
+      margin-top: 0;
+      height: 100vh;
 
       flex-direction: row;
       // justify centers horizontally

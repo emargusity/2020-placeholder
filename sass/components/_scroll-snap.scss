@@ -1,0 +1,47 @@
+//
+// body {
+//     scroll-snap-type: y mandatory;
+//     overflow: hidden scroll;
+//     height: 100vh!important;
+// }
+//
+// #intro-slide, .project-container, #stream {
+//   scroll-snap-align: start;
+//   scroll-snap-stop: always;
+// }
+//
+
+// #stream {
+//     scroll-snap-type: y mandatory;
+//     height: 100vh!important;
+//     overflow: hidden scroll;
+// }
+//
+// .stream-center, .stream-left, .stream-right {
+//   scroll-snap-align: start;
+//   scroll-snap-stop: always;
+//   border: solid 2px red;
+//   position: sticky;
+// }
+
+// html, body {
+//   // height: 100vh;
+//   // overflow: hidden;
+// }
+//
+// // #scroll-snap-container {
+// //     // height: 100vh;
+// //     position: relative;
+// //     display: block;
+// //     scroll-snap-type: y mandatory;
+// //     overflow-y: scroll;
+// // }
+//
+// // #intro-slide, .spacer {
+// //     scroll-snap-stop: always;
+// // }
+//
+// #intro-slide, .spacer, #stream {
+//     scroll-snap-align: start;
+//     // scroll-snap-stop: normal;
+// }

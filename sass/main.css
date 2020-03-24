@@ -507,7 +507,9 @@ p, a {
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  position: absolute;
+  position: relative;
+  top: 0;
+  left: 0;
   background: url("../img/hero-image.jpg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -567,6 +569,10 @@ p, a {
     position: relative;
     top: 16px; } }
 
+.spacer {
+  width: 100vw;
+  height: 100vh; }
+
 #stream {
   display: flex;
   flex-direction: column;
@@ -577,7 +583,6 @@ p, a {
   justify-content: center; }
   @media (min-width: 767px) {
     #stream {
-      margin-top: 200vh;
       margin-bottom: 100vh; } }
 
 #stream img {
@@ -637,9 +642,11 @@ ul, li {
   animation-delay: 1000ms; }
   @media (min-width: 767px) {
     .project-container {
+      position: fixed;
+      top: 0;
+      left: 0;
       margin-top: 0;
       height: 100vh;
-      position: fixed;
       flex-direction: row;
       justify-content: center;
       align-items: center; } }
