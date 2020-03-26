@@ -6,11 +6,25 @@
     position: relative;
     top: 0;
     left: 0;
-    background: url("../img/hero-image.jpg") no-repeat center center;
+    background: url("../img/hero-image.jpg") no-repeat center center, black;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    @include respond-to(md) {
+      -webkit-background-size: 900px;
+      -moz-background-size: 900px;
+      -o-background-size: 900px;
+      background-size: 900px;
+    }
+
+    @include respond-to(lg) {
+      -webkit-background-size: 1200px;
+      -moz-background-size: 1200px;
+      -o-background-size: 1200px;
+      background-size: 1200px;
+    }
 
     @include globalFadeIn($fadeTiming: 1000ms);
 
@@ -78,6 +92,7 @@
     clear: both;
     position: relative;
     top: 16px;
+    display: none;
   }
 }
 
@@ -98,5 +113,26 @@
 }
 
 .arrow {
-  @extend .a8, .a-eight
+  @extend .a8, .a-eight;
+}
+
+
+#annotations {
+    position: absolute;
+
+    img {
+      opacity: 0.0;
+    }
+
+    @include respond-to(md) {
+        // opacity: 1.0;
+
+        img {
+          @include globalFadeIn($fadeTiming: 1200ms, $fadeInDelay: 700ms);
+          margin-top: 24px;
+          margin-left: -15px;
+          width: 1010px;
+          mix-blend-mode: screen;
+        }
+    }
 }

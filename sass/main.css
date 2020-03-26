@@ -569,7 +569,7 @@ p, a {
   position: relative;
   top: 0;
   left: 0;
-  background: url("../img/hero-image.jpg") no-repeat center center;
+  background: url("../img/hero-image.jpg") no-repeat center center, black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -584,6 +584,18 @@ p, a {
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media (min-width: 767px) {
+    #intro-slide {
+      -webkit-background-size: 900px;
+      -moz-background-size: 900px;
+      -o-background-size: 900px;
+      background-size: 900px; } }
+  @media (min-width: 1024px) {
+    #intro-slide {
+      -webkit-background-size: 1200px;
+      -moz-background-size: 1200px;
+      -o-background-size: 1200px;
+      background-size: 1200px; } }
   #intro-slide:after {
     content: "";
     width: 100vw;
@@ -626,7 +638,25 @@ p, a {
   .arrow {
     clear: both;
     position: relative;
-    top: 16px; } }
+    top: 16px;
+    display: none; } }
+
+#annotations {
+  position: absolute; }
+  #annotations img {
+    opacity: 0.0; }
+  @media (min-width: 767px) {
+    #annotations img {
+      -webkit-animation: fadeIn 1200ms ease-in-out;
+      -moz-animation: fadeIn 1200ms ease-in-out;
+      -o-animation: fadeIn 1200ms ease-in-out;
+      animation: fadeIn 1200ms ease-in-out;
+      animation-fill-mode: forwards;
+      animation-delay: 700ms;
+      margin-top: 24px;
+      margin-left: -15px;
+      width: 1010px;
+      mix-blend-mode: screen; } }
 
 #stream {
   display: flex;
