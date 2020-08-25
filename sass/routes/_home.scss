@@ -1,16 +1,12 @@
 
-ul, li {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
 
 .project-container {
     display: flex;
     width: 100vw;
     height: auto;
     flex-direction: column;
+
+    pointer-events:none;
 
     margin-top: 20vh;
 
@@ -54,11 +50,20 @@ ul, li {
 }
 
 
+ul, li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    pointer-events: all;
+}
+
+
 
 #personal-data, #links {
     position: relative;
     display: block;
     margin: 45px 0 0px calc(40px + 6vw);
+    z-index: 9999;
 
     @include respond-to(md) {
       margin: 0;

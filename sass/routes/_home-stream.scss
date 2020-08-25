@@ -24,12 +24,18 @@
 .stream-left {
     width: 50vw;
     margin-left: 2vw;
+    &:hover {
+      z-index: 10;
+    }
 }
 
 .stream-right {
     width: 70vw;
     margin-right: 2vw;
     align-self: flex-end;
+    &:hover {
+      z-index: 10;
+    }
 }
 
 .stream-center {
