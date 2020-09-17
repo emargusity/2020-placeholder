@@ -70,7 +70,7 @@ p, a {
   }
 }
 
-.project-column-projects a {
+.project-column-projects a, #links a {
   &:hover {
     @include anyEaseIn($easeTiming: 100ms);
     color: color(home-hover);

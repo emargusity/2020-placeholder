@@ -84,6 +84,8 @@ ul, li {
 
 #links {
 
+  pointer-events: all;
+
   margin: 15px 0 45px calc(30px + 6vw);
 
   @include respond-to(md) {

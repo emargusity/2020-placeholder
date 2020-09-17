@@ -495,7 +495,7 @@ p, a {
     .project-column-title p {
       margin-bottom: 16px; } }
 
-.project-column-projects a:hover {
+.project-column-projects a:hover, #links a:hover {
   -webkit-transition: all 100ms ease-in-out;
   -moz-transition: all 100ms ease-in-out;
   -o-transition: all 100ms ease-in-out;
@@ -774,6 +774,7 @@ ul, li {
         margin-left: 2px; } }
 
 #links {
+  pointer-events: all;
   margin: 15px 0 45px calc(30px + 6vw); }
   @media (min-width: 767px) {
     #links {
