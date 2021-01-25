@@ -102,3 +102,19 @@ ul, li {
     }
   }
 }
+
+
+.campaign {
+  margin: 0;
+  padding: 0;
+   p {
+     color: #888;
+   }
+   a, p {
+     display: inline-block;
+     padding: 8px;
+   }
+   a {
+      margin-left: -12px;
+   }
+}

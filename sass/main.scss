@@ -1,14 +1,23 @@
 /*CORE*/
-@import "core/*";
+@import "core/_functions.scss";
+@import "core/_grid.scss";
 
 /* BASE */
-@import "base/*";
+@import "base/_core.scss";
+@import "base/_normalize.scss";
+@import "base/_reset.scss";
 
 /* COMPONENTS */
-@import "components/*";
+@import "components/_animation.scss";
+@import "components/_pureparallax.scss";
 
 /* VARIABLES */
-@import "vars/*";
+@import "vars/_colors.scss";
+@import "vars/_home-vars.scss";
+@import "vars/_home.scss";
+@import "vars/_typography.scss";
 
 /* PARTIALS */
-@import "routes/*";
+@import "routes/_home-intro.scss";
+@import "routes/_home-stream.scss";
+@import "routes/_home.scss";

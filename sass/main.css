@@ -789,4 +789,15 @@ ul, li {
       #links a {
         float: right; } }
 
+.campaign {
+  margin: 0;
+  padding: 0; }
+  .campaign p {
+    color: #888; }
+  .campaign a, .campaign p {
+    display: inline-block;
+    padding: 8px; }
+  .campaign a {
+    margin-left: -12px; }
+
 /*# sourceMappingURL=main.css.map */
